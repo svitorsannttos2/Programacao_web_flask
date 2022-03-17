@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bem vindo as minhas Musicas</title>
+        </head>
+<body>
+
+    <div class="container">
+        <div class="songList">
+            <h1>Musica:</h1>
+            <div class="songItemContainer">
+                {% for file in files %}
+                <div class="songItem">
+                    <span class="songName" id="{{loop.index}}" >{{file}}</span>
+                    <span class="songlistplay"><span class="timestamp" id="{{loop.index}}">05:34 <i id="0" class="" id="{{loop.index}}"></i> </span></span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
